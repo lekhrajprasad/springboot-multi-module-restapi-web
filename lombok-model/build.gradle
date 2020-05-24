@@ -1,0 +1,29 @@
+group = 'com.lpras.lombok.model'
+version = '1.0.0-SNAPSHOT'
+
+bootJar {
+    archiveClassifier = 'boot'
+}
+
+jar {
+    enabled = true
+}
+
+dependencies {
+    //compileOnly 'org.projectlombok:lombok'
+    //annotationProcessor 'org.projectlombok:lombok'
+    implementation 'org.springframework.boot:spring-boot-starter'
+    compileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
+    compileOnly 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    //compileOnly 'org.mariadb.jdbc:mariadb-java-client'
+    //runtime 'org.springframework.boot:spring-boot-starter-actuator'
+    //runtime 'org.springframework.boot:spring-boot-devtools'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    compileOnly 'org.springframework.boot:spring-boot-starter-security'
+}
+
+/*test {
+    useJUnitPlatform()
+}*/

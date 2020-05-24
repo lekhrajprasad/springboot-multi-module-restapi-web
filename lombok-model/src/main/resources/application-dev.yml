@@ -1,0 +1,5 @@
+debug: true
+
+spring:
+  devtools:
+    add-properties: true

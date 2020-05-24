@@ -1,0 +1,50 @@
+# Application configuration.
+server:
+  port: 8102
+
+# Local mongodb configuration.
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: crud
+  output:
+    ansi:
+      enabled: DETECT
+
+storage:
+  dbPath: /var/lib/mongodb
+# Logging configuration.
+
+  #pattern:
+   # console: %d{yyyy-MM-dd HH:mm:ss} - %msg%n
+
+logging:
+  file: logs/application-debug.log
+  pattern:
+    console: "%clr %d %-5level %logger : %msg%n"
+    file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    root: WARN
+    org.springframework.web: ERROR
+    com.assignment.springboot.mongo: DEBUG
+    #org.hibernate: ERROR
+
+  # Use "*" to expose all endpoints, or a comma-separated list to expose selected ones
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+        exclude:
+
+  # Use "*" to expose all endpoints, or a comma-separated list to expose selected ones
+    jmx:
+      exposure:
+        include: "*"
+        exclude:
+  # HEALTH ENDPOINT
+    health:
+      show-details: always
+

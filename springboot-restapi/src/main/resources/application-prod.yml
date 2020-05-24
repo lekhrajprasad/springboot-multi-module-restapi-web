@@ -1,0 +1,43 @@
+# Application configuration.
+server:
+  port: 8100
+
+# Local mongodb configuration.
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27018
+      database: ducat-assignment
+
+# Logging configuration.
+logging:
+  level:
+    root: WARN
+    org.springframework.web: WARN
+    com.lpras.springboot.restapi: ERROR
+  #pattern:
+   # console: %d{yyyy-MM-dd HH:mm:ss} - %msg%n
+
+
+
+    datasource:
+      platform: mariadb
+      url: jdbc:mariadb://localhost:3306/user
+      username: lpras
+      password: lpras
+      driverClassName: org.mariadb.jdbc.Driver
+      testWhileIdle: true
+      validationQuery: SELECT 1
+      users-query: select email, password, '1' as enabled from auth_user where email=? and status='VERIFIED'
+      roles-query: select u.email, r.role_name from auth_user u inner join auth_user_role ur on(u.auth_user_id=ur.auth_user_id) inner join auth_role r on(ur.auth_role_id=r.auth_role_id) where u.email=?
+
+      jpa:
+        hibernate:
+          ddl-auto: validate
+
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+            #ddl-auto: create-drop
+      show-sql: true

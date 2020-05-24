@@ -1,0 +1,71 @@
+# Application configuration.
+server:
+  port: 8080
+  #servlet:
+   # context-path: /customerapi
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: crud
+  output:
+    ansi:
+      enabled: DETECT
+      #enable: ALWAYS
+  boot:
+    admin:
+      url: http://localhost:8031:storage
+      client:
+        url: http://localhost:8031
+  dbPath: /var/lib/mongodb
+# Logging configuration.
+  # For versions 2.*.*
+  #spring.boot.admin.client.url=http://localhost:8031
+  # For versions 1.*.*
+  #spring.boot.admin.client.service-url=http://localhost:8031
+  #spring.boot.admin.client.management-url=http://localhost:8031
+  #spring.boot.admin.client.health-url=http://localhost:8031/health
+  #pattern:
+   # console: %d{yyyy-MM-dd HH:mm:ss} - %msg%n
+
+logging:
+  file: logs/application-debug.log
+  pattern:
+    #console: "%clr %d %-5level %logger : %msg%n"
+    console: "%clr %d %-5level ${PID} - %X{sessionId} - %X{correlationId} : %msg%n"
+    file: "%d %-5level [%thread] - ${PID} - %X{sessionId} - %X{correlationId} : %msg%n"
+    #file: "%d %-5level [%thread] %logger : %msg%n"
+  level:
+    root: DEBUG
+    jdk.event.security: WARN
+    org.springframework: WARN
+    org.apache.tomcat: ERROR
+    org.apache.catalina: WARN
+    org.mongodb.driver: INFO
+    org.springframework.bean: DEBUG
+    org.springframework.boot: INFO
+    org.springframework.web: WARN
+    com.lpras.springboot.restapi: INFO
+    org.hibernate: WARN
+    org.springframework.jdbc: WARN
+
+  # Use "*" to expose all endpoints, or a comma-separated list to expose selected ones
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+        exclude:
+
+  # Use "*" to expose all endpoints, or a comma-separated list to expose selected ones
+    jmx:
+      exposure:
+        include: "*"
+        exclude:
+  # HEALTH ENDPOINT
+    health:
+      show-details: always
+
+

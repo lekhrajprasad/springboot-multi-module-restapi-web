@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: dev
+    include:
+      - actuator
+email:
+  to: lekh
+  subject: alekh
+  body: Welcome to lombok api world!
+  phone: 7795565234

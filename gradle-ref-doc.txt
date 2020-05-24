@@ -1,0 +1,24 @@
+https://docs.gradle.org/current/userguide/project_report_plugin.html
+Tasks
+The project report plugin defines the following tasks:
+
+dependencyReport — DependencyReportTask
+Generates the project dependency report.
+
+htmlDependencyReport — HtmlDependencyReportTask
+Generates an HTML dependency and dependency insight report for the project or a set of projects.
+
+propertyReport — PropertyReportTask
+Generates the project property report.
+
+taskReport — TaskReportTask
+Generates the project task report.
+
+projectReport — Task
+Depends on: dependencyReport, propertyReport, taskReport, htmlDependencyReport
+
+Generates all project reports.
+--------------------------------------------------------------------------------------
+command to build, skip test classes and generate gradle dependencies report :
+gradle clean build -x test projectReport
+gradle clean build -x test publishToMavenLocal TODO not working need to look the issue

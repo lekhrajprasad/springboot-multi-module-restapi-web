@@ -1,0 +1,20 @@
+# Application configuration.
+server:
+  port: 8100
+
+# Local mongodb configuration.
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27018
+      database: ducat-assignment
+
+# Logging configuration.
+logging:
+  level:
+    root: WARN
+    org.springframework.web: ERROR
+    com.assignment.springboot.mongo: ERROR
+  #pattern:
+   # console: %d{yyyy-MM-dd HH:mm:ss} - %msg%n

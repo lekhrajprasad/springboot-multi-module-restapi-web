@@ -1,0 +1,30 @@
+https://docs.mongodb.com/manual/mongo/
+https://linuxforever.info/2017/04/13/how-to-install-mongodb-3-4-in-linux-mint-18-ubuntu-16-04/
+https://examples.javacodegeeks.com/enterprise-java/spring/boot/spring-boot-mongodb-crud-operations-example/
+https://www.codementor.io/gtommee97/rest-api-java-spring-boot-and-mongodb-j7nluip8d
+https://www.journaldev.com/18156/spring-boot-mongodb
+
+Start Mongodb:
+sudo systemctl start mongodb
+check the running status of MongoDB serve:
+sudo systemctl status mongodb
+
+db
+show dbs
+use <dbname>
+db.<collection-name>.find( {} )
+
+db.ducat-assignment.find( {} )
+
+Aspect
+https://www.programcreek.com/java-api-examples/?api=org.aspectj.lang.annotation.Pointcut
+https://www.baeldung.com/spring-aop-pointcut-tutorial
+https://blog.espenberntsen.net/2010/03/20/aspectj-cheat-sheet/
+https://www.concretepage.com/spring/spring-aop-aspectj-annotation
+
+To Check the helth of API
+http://localhost:8102/actuator
+http://localhost:8102/actuator/health\
+https://www.callicoder.com/spring-boot-actuator/
+adding reference for swager:
+https://www.concretepage.com/spring-4/spring-rest-swagger-2-example

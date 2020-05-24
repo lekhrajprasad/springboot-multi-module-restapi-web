@@ -1,0 +1,4 @@
+rootProject.name = 'springboot-restapi-web'
+include 'lombok-model'
+include 'springboot-mongodb-repo'
+include 'springboot-restapi'

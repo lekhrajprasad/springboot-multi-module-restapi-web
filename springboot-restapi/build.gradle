@@ -1,0 +1,51 @@
+group 'com.lpras.springboot.restapi'
+version '1.0.0-SNAPSHOT'
+
+apply plugin: 'war'//comment this for building executable jar
+
+/*bootJar {
+    archiveClassifier = 'boot'
+}*/
+jar {
+    enabled = true
+}
+
+dependencies {
+    //adding local lombok-model dependecy
+    implementation project(':lombok-model')
+    implementation project(':springboot-mongodb-repo')
+   // implementation "com.lpras.springboot.mongodb:springboot-mongodb-repo:1.0.0-SNAPSHOT"
+    //implementation "com.lpras.lombok.model:lombok-model:1.0.0-SNAPSHOT"
+    implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("org.springframework.boot:spring-boot-devtools")
+    implementation("org.springframework.boot:spring-boot-starter-aop")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    //springboot securities
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    testImplementation 'org.springframework.boot:spring-boot-starter-security'
+    //Mariadb
+    //implementation("org.mariadb.jdbc:mariadb-java-client")
+    
+    //providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    //mokito
+    /*testCompile 'junit:junit:4.12',
+            'org.powermock:powermock-core:1.6.1',
+            'org.powermock:powermock-module-junit4:1.6.1',
+            'org.powermock:powermock-api-mockito:1.6.1'
+    testCompile(group: 'objenesis', name: 'objenesis', version: '2.1')*/
+    //testCompile "org.mockito:mockito-all:1.10.19"
+    //testCompile "org.powermock:powermock-mockito-release-full:1.6.4"
+    /*testCompile 'junit:junit:4.12'
+    testCompile 'org.powermock:powermock-api-mockito2:2.0.0-beta.5'
+    testCompile 'org.powermock:powermock-module-testng:2.0.0-beta.5'
+    testCompile 'net.bytebuddy:byte-buddy:1.8.3'
+    testCompile 'net.bytebuddy:byte-buddy-agent:1.8.3'*/
+
+    testImplementation 'org.powermock:powermock-module-junit4:2.0.7'
+    testImplementation 'org.powermock:powermock-api-mockito2:2.0.7'
+
+}
