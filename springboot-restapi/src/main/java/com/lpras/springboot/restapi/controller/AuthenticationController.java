@@ -1,3 +1,4 @@
+/*
 package com.lpras.springboot.restapi.controller;
 
 import org.springframework.stereotype.Controller;
@@ -30,3 +31,4 @@ public class AuthenticationController {
 		return modelAndView;
 	}
 }
+*/

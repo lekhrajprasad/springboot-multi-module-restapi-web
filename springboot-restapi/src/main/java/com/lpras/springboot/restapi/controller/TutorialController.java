@@ -21,7 +21,7 @@ import org.thymeleaf.util.ListUtils;
 import java.util.List;
 import java.util.Optional;
 
-@CrossOrigin(origins = "http://192.168.43.90:8081")
+@CrossOrigin(origins = "http://192.168.43.90:8082")
 @RestController
 @RequestMapping(value = "/api")
 public class TutorialController {

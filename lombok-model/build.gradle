@@ -2,16 +2,22 @@ group = 'com.lpras.lombok.model'
 version = '1.0.0-SNAPSHOT'
 
 bootJar {
+    enabled = false
     archiveClassifier = 'boot'
 }
 
 jar {
     enabled = true
 }
-
+configurations {
+    compileOnly {
+        //for lombok process 
+        extendsFrom annotationProcessor
+    }
+}
 dependencies {
-    //compileOnly 'org.projectlombok:lombok'
-    //annotationProcessor 'org.projectlombok:lombok'
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
     implementation 'org.springframework.boot:spring-boot-starter'
     compileOnly 'org.springframework.boot:spring-boot-starter-data-jpa'
     compileOnly 'org.springframework.boot:spring-boot-starter-data-mongodb'

@@ -2,11 +2,6 @@ package com.lpras.springboot.restapi.service;
 
 import com.lpras.springboot.restapi.model.CustomerUserDetails;
 import com.lpras.springboot.restapi.repo.CustomerUserDetailsRepository;
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Filters;
-import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

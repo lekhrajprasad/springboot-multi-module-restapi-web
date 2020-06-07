@@ -16,9 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Collection;
 import java.util.List;
 
-@CrossOrigin(origins = "http://192.168.43.90:8081")
+//@CrossOrigin(origins = "http://192.168.43.90:8081")
 @RestController
-@RequestMapping(value = "/api/emp")
+//@RequestMapping(value = "/api/emp")
 public class EmployeeController {
     @Autowired
     EmployeeService serv;

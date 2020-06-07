@@ -16,17 +16,13 @@ public class TutorialServiceimpl implements TutorialService {
     @Autowired
     private TutorialRepository tutorialRepository;
 
-    /* (non-Javadoc)
-     * @see com.assignment.springboot.mongo.service.Employeeservice#createEmployee(java.util.List)
-     */
+
     @Override
     public Tutorial createTutorial(Tutorial tut) {
         return tutorialRepository.save(new Tutorial(null, tut.getTitle(), tut.getDescription(), false));
     }
 
-    /* (non-Javadoc)
-     * @see com.assignment.springboot.mongo.service.Employeeservice#getAllEmployees()
-     */
+
     @Override
     public List<Tutorial> getAllTutorials(String title) {
         List<Tutorial> tutorials = new ArrayList<>();

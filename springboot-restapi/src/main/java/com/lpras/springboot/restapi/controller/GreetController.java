@@ -1,3 +1,4 @@
+/*
 package com.lpras.springboot.restapi.controller;
 
 import org.slf4j.Logger;
@@ -6,9 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+*/
 /**
  * Created by gkatzioura on 9/2/16.
- */
+ *//*
+
 @RestController
 public class GreetController {
 
@@ -25,3 +28,4 @@ public class GreetController {
     }
 
 }
+*/

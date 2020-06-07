@@ -1,9 +1,12 @@
+/*
 package com.lpras.lombok.converters;
 
 import com.lpras.lombok.dto.EmployeeDTO;
 import com.lpras.lombok.model.Employee;
-import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
+
+@Component
 public class EmployeeDTOToEmployee implements Converter<EmployeeDTO, Employee> {
     @Override
     public Employee convert(EmployeeDTO employeeDTO) {
@@ -14,3 +17,4 @@ public class EmployeeDTOToEmployee implements Converter<EmployeeDTO, Employee> {
         return employee;
     }
 }
+*/
